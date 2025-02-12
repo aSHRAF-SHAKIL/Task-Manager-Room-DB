@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#D4E9CF"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.UpdateTask">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/greenBold"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="Task Manager"
+        app:titleTextColor="@color/forthThird"
+        app:titleTextAppearance="@style/Widget.AppCompat.Toolbar"
+        />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/TaskUpdateBtn"
+        android:layout_margin="12dp"
+        app:icon="@drawable/ic_action_name_update"
+        app:iconGravity="textEnd"
+        android:text="Update"
+        android:backgroundTint="@color/forthThird"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/titleInputUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/TaskDeleteBtn"
+        android:layout_margin="12dp"
+        app:icon="@drawable/ic_twotone_delete_forever_24"
+        app:iconGravity="textEnd"
+        android:text="Delete"
+        android:backgroundTint="@color/forthThird"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintEnd_toStartOf="@id/TaskUpdateBtn"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/titleInputUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/titleInputUpdate"
+        android:hint="Update title"
+        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TaskUpdateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+    <EditText
+        android:id="@+id/descriptionInputUpdate"
+        android:autofillHints=""
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:hint="Update description"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleInputUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/dateInputUpdate"
+        android:hint="Update Date : dd/mm/yyyy"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionInputUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+    <CheckBox
+        android:id="@+id/updateCheckBox"
+        android:hint="Task State"
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateInputUpdate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

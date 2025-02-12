@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="8dp"
+        android:background="@color/greenSecond"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Task Item Container (Converted to ConstraintLayout) -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:background="@color/forthThird">
+
+            <!-- Checkbox -->
+            <CheckBox
+                android:id="@+id/RVtaskCheckboxB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- Task Title -->
+            <TextView
+                android:id="@+id/RVtaskTitleTV"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toEndOf="@id/RVtaskCheckboxB"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <!-- Task Description -->
+            <TextView
+                android:id="@+id/RVtaskDescriptionTV"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task description goes here..."
+                android:textSize="14sp"
+                android:textColor="#305D03"
+                app:layout_constraintStart_toEndOf="@id/RVtaskCheckboxB"
+                app:layout_constraintTop_toBottomOf="@id/RVtaskTitleTV"
+                />
+
+            <!-- Due Date -->
+            <TextView
+                android:id="@+id/RVtaskDueDateTV"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 days remaining"
+                android:textSize="12sp"
+                android:textColor="#139D2A"
+                app:layout_constraintStart_toEndOf="@id/RVtaskCheckboxB"
+                app:layout_constraintTop_toBottomOf="@id/RVtaskDescriptionTV"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

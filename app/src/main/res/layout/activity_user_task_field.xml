@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#D4E9CF"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.UserTaskField">
+    
+
+    <LinearLayout
+
+        android:id="@+id/topInputBar"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="264dp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+
+            android:text="Title"
+            android:textSize="18sp" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/addTaskInsertBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:backgroundTint="@color/forthThird"
+            android:padding="8dp"
+            android:text="Add Task"
+            android:elevation="8dp"
+            app:icon="@drawable/ic_action_name_update" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/titleInput"
+        android:hint="title"
+        android:textSize="16sp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topInputBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:id="@+id/wordCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="8 characters"
+        android:layout_margin="16dp"
+        android:textSize="12sp"
+        android:padding="8dp"
+
+
+        app:layout_constraintStart_toEndOf="@id/wordCount2"
+        app:layout_constraintTop_toBottomOf="@+id/titleInput" />
+
+
+    <TextView
+        android:id="@+id/wordCount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="20dp"
+        android:hint="Date: DD/MM/YYY"
+        android:padding="8dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wordCount"
+        app:layout_constraintTop_toBottomOf="@+id/titleInput" />
+
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:hint="Task Description"
+        android:textSize="22sp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/dataPickerLL"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <Button
+            android:id="@+id/userDueDate"
+            android:text="Date"
+            android:textColor="@color/forthThird"
+            android:textSize="18sp"
+
+            android:backgroundTint="@color/greenThird"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/dueDateText"
+            android:layout_width="200dp"
+            android:gravity="start|center"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:text="DD/MM/YYYY"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/taskCheckboxBInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="8dp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

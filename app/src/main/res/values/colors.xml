@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="greenBold">#0F2A1D</color>
+    <color name="greenSecond">#375534</color>
+    <color name="greenThird">#6B9071</color>
+    <color name="forthThird">#AEC3B0</color>
+    <color name="greenWhite">#E3EED4</color>
+
+
+
+
+</resources>
